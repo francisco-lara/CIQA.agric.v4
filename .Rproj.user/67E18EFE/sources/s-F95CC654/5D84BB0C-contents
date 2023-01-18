@@ -1,0 +1,18 @@
+library(CIQA.agric.v1)
+IP<-"http://192.168.43.53/"
+D<-DF_str(IP=IP)
+Time_dif(D)
+data_lost(D)
+data_lost_vis(D)
+input_data_miss_graph(D)
+DF<-input_data_miss_DF(D)
+AR<-arima_DF(DF, h=3)
+SR_G<-arima_Graph(DF, h=3)
+SR_G
+Temp_aire<-temp_aire(AR)
+Temp_aire
+DF_VPD<-VPD_OM(AR)
+VPD_OM_GRAPH(AR)
+UT<-UT(AR)
+UT
+AR
