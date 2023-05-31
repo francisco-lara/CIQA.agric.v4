@@ -19,8 +19,8 @@ library(lubridate)
 DF_str <-function(IP)
 {
   D<-read.table(IP, sep = ",", header = F)
-  Dx<-D%>%select(V1,V3,V5)
-  colnames(Dx)<-c("Fecha", "Temperatura", "Humedad_Relativa")
+  Dx<-D%>%select(V1,V3,V5, V7,V9,V11,V13)
+  colnames(Dx)<-c("Fecha", "Temperatura", "Humedad_Relativa", "R", "G", "B","C")
   Dx$Fecha<-dmy_hms(Dx$Fecha)
   return(Dx)
 }
